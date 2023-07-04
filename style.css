@@ -1,0 +1,70 @@
+#questao4{
+    display: grid;
+    grid-template-columns:repeat(2, 50%);
+    grid-template-rows:auto ;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-content: center;
+}
+
+#apresentarimagenscluna1{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    padding: 25%;
+    margin-left: 25%;
+}
+#apresentarimagenscluna2{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    padding: 50%;
+    margin-left: 50%;
+}
+#lightbox{
+    grid-row-start: 1;
+    grid-row-end:1;
+}
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    -webkit-text-fill-color: white;
+  }
+  
+  .lightbox-content {
+    max-width: 100%;
+    max-height: 90vh;
+    margin: auto;
+    display: block;
+  }
+
+  .lightbox button{
+    background-color: transparent;
+    color: transparent;
+    border-color: transparent;
+  }
+
+  .close {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
