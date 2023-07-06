@@ -1,4 +1,16 @@
-//Questão 3
+function mostraquestao(numeroquestao){
+  let home = document.getElementById("home");
+  let questao1 = document.getElementById("questao01");
+  let questao2 = document.getElementById("questao02");
+  let questao3 = document.getElementById("questao03");
+  let questao4 = document.getElementById("questao04");
+  if(numeroquestao<=0){home.style.display='grid';} else{home.style.display='none';}
+  if(numeroquestao==1){questao1.style.display='block';} else{questao1.style.display='none';}
+  if(numeroquestao==2){questao2.style.display='block';} else{questao2.style.display='none';}
+  if(numeroquestao==3){questao3.style.display='block';} else{questao3.style.display='none';}
+  if(numeroquestao==4){questao4.style.display='grid';} else{questao4.style.display='none';}
+}
+//Questão 3 e 4//
 function listImages(url) {
     return fetch(url)
       .then(res => {
@@ -85,3 +97,4 @@ listImages('https://jsonplaceholder.typicode.com/photos')
   .catch(error => {
     console.error(error);
   });
+////////////////////////////////////////////////////////////////////////////////////////////
