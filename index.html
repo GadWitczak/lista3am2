@@ -16,10 +16,9 @@
     <nav>
       <ul>
         <li><button id="butaoq0" onclick="mostraquestao(0)">Home</button></li>
-        <li><button id="butaoq1" onclick="mostraquestao(1)">Questão 1</button></li>
-        <li><button id="butaoq2" onclick="mostraquestao(2)">Questão 2</button></li>
-        <li><button id="butaoq3" onclick="mostraquestao(3)">Questão 3</button></li>
-        <li><button id="butaoq4" onclick="mostraquestao(4)">Questão 4</button></li>
+        <li><button id="butaoq1" onclick="mostraquestao(1)">Questão 1 e 2</button></li>
+        <li><button id="butaoq4" onclick="mostraquestao(4)">Questão 3 e 4</button></li>
+        <li><button id="butaoq5" onclick="mostraquestao(5)">Questão 5, 6 e 7</button></li>
         </ul>
     </nav>
   </div>
@@ -32,13 +31,22 @@
     <h3>Nome: REBEKA GIOVANNA LEITE LIMA DE SOUZA - 472998 </h3>
   </div>  
   <div id="questao01">
-    <p>questao 1</p>
-  </div>
-  <div id="questao02">
-    <p>questao 2</p>
-  </div>
-  <div id="questao03">
-    <p>questao 3</p>
+    <h1>Cadastro</h1>
+  <form name="myForm" onsubmit="return validateForm()" method="post">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" maxlength="40" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="researchGate">Link do ResearchGate:</label>
+    <input type="url" id="researchGate" name="researchGate" required><br>
+
+    <label for="phone">Telefone:</label>
+    <input type="tel" id="phone" name="phone" pattern="\(\d{2}\) \d{4}-\d{4}" required><br>
+
+    <input type="submit" value="Cadastrar">
+  </form>
   </div>
   <div id="questao04">
     <div id="lightbox" class="lightbox">
@@ -48,7 +56,17 @@
     </div>
     <div id="apresentarimagenscoluna1"></div>
     <div id="apresentarimagenscoluna2"></div>
-    </div>  
+    </div>
+    <div id="questao05">
+      <button onclick="switchPage(postsResponse, currentPage - 1)">Anterior</button>
+      <button onclick="switchPage(postsResponse, currentPage + 1)">Próximo</button>
+      <input type="text" id="userId" placeholder="Filtrar por usuário"
+          onchange="listPotsByUset('https://jsonplaceholder.typicode.com/posts',this.value)">
+      <button onclick="showPosts(postsResponse)">Chat</button>
+      <div id="posts">
+      </div>
+    </div> 
+    <div id="questao08"></div>
   </div>
 </div>
 </body>
