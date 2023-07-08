@@ -18,8 +18,8 @@
 }
 #home h3{
   grid-column-start: 2;
-  grid-column-end: 4;
-  margin-left: 10vw;
+  grid-column-end: 5;
+  margin-left: 20vw;
 }
 #questoes{
   display: grid;
@@ -56,16 +56,16 @@
 #conteudo{
   grid-column-start: 2;
   grid-column-end: 10;
-  margin-left: -5vw;
+  margin-left: 5vw;
 }
 #questao01{
   margin-left: 15%;
   display: none;
   font-family: Arial, Helvetica, sans-serif;
+  grid-template-columns: repeat(5, 15vw);
+  grid-template-rows: repeat(10, 5vw);
 }
-#questao01 h1{
-  text-align: center;
-}
+
 #questao04{
     display: none;
     margin-left: 15%;
@@ -78,6 +78,9 @@
 #questao05{
   display: none;
   margin-left: 15%;
+}
+#questao07{
+  display: none;
 }
 
 #apresentarimagenscluna1{
@@ -141,11 +144,20 @@
     text-decoration: none;
     cursor: pointer;
   }
-
+#questao01 h1{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
   form {
     max-width: 400px;
     margin: 0 auto;
     text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
   }
 
   label {
@@ -155,6 +167,11 @@
     text-align: right;
     left: 0;
     margin-top: 4px;
+    margin-left: -2%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
   }
 
   input[type="text"],
@@ -205,3 +222,32 @@
       max-width: 600px;
     }
   }
+
+  .b{
+    heigth: 10x;
+    width: 100px;
+    background-color: black;
+    color: whitesmoke;
+    display: block;
+}
+.i{
+    heigth: 10x;
+    width: 100px;
+    background-color: red;
+    color: whitesmoke;
+    display: inline;
+}
+.td{
+    heigth: 10x;
+    width: 200px;
+    background-color: black;
+    color: whitesmoke;
+    display: table-column;
+}
+.ib{
+    heigth: 10x;
+    width: 100px;
+    background-color: red;
+    color: whitesmoke;
+    display: inline-block;
+}
